@@ -87,7 +87,9 @@ var speed = 10;
         if (PositionX > boardWidth) {
           speed *= -1;
         }
-
+        if (PositionX < 0) {
+          speed *= -1;
+        }
           
         }
 
@@ -102,9 +104,9 @@ var speed = 10;
           PositionX = 0;
           changeBoxText(points);
           points++;
-          speed = speed + 3;
+          speed = 3* points + 10;
         }
-
+    
 
         
       })();
